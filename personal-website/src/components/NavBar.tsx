@@ -1,0 +1,11 @@
+export default function NavBar() {
+    return(
+        <nav>
+        <ul>
+          <li><a href = "/">Home</a></li>
+          <li><a href = "/about">About</a></li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    )
+}
