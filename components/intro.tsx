@@ -14,7 +14,7 @@ export default function Intro() {
 
         <FadeInCenter delay = {1}>
         <div className="inline-block max-w-4xl text-center justify-center">
-            <span className={title()}>Hi, I'm&nbsp;</span>
+            <span className={title()}>Hi, I&apos;m&nbsp;</span>
             <TypeAnimation
                 sequence={[
                     // Same substring at the start will only be typed out once, initially

@@ -7,7 +7,7 @@ export default function Project(){
     <div className="inline-block max-w-xl text-left justify-left">
       <span className={subtitle()}>MY WORK</span>
       <span className={title({ color: "violet" })}>Projects.</span>
-      <span className={subtitle()}>A list of all the projects I've completed, whether in a team setting or solo.</span>
+      <span className={subtitle()}>A list of all the projects I&apos;ve completed, whether in a team setting or solo.</span>
       <br/>
       <Card>
         <CardBody>

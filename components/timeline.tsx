@@ -78,7 +78,7 @@ const Timeline = () => (
         <br />
         <li>Developed an admin dashboard where users with admin privledges could easily view/edit/delete users within their organization.</li>
         <br />
-        <li>Rebuilt the frontend using HeroUI based on the design team's specifications.</li>
+        <li>Rebuilt the frontend using HeroUI based on the design team&apos;s specifications.</li>
       </ul>
     </VerticalTimelineElement>
     <VerticalTimelineElement
@@ -109,7 +109,7 @@ const Timeline = () => (
       <h2 className="vertical-timeline-element-title" style = {{color: "white"}}>Software Engineer Intern</h2>
       <h4 className="vertical-timeline-element-subtitle">Clean Energy Associates</h4>
                   <ul className=" mt-4 text-base text-gray-200 list-disc list-inside text-white">
-        <li>Performed upkeep on the company's Project Data Collector application using React.</li>
+        <li>Performed upkeep on the company&apos;s Project Data Collector application using React.</li>
         <br />
         <li>Spearheaded the integration of DocuSign within the company.</li>
         <br />

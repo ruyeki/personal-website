@@ -13,11 +13,11 @@ export default function About() {
         </p>
         <br />
         <p className={subtitle()}>
-          In my personal life, sports have always been a constant since I was a kid. I started playing basketball at the age of 5 and continued throughout high school and recreationally in college. Lately, I’ve been diving into other sports as well — from the MLB to boxing to the UFC — and I've really come to enjoy the community these sports bring.
+          In my personal life, sports have always been a constant since I was a kid. I started playing basketball at the age of 5 and continued throughout high school and recreationally in college. Lately, I&apos;ve been diving into other sports as well — from the MLB to boxing to the UFC — and I&apos;ve really come to enjoy the community these sports bring.
         </p>
         <br />
         <p className={subtitle()} >
-          When I'm not working, you'll find me playing a game of pickup basketball, working out, or in bed scrolling on TikTok.
+          When I&apos;m not working, you&apos;ll find me playing a game of pickup basketball, working out, or in bed scrolling on TikTok.
         </p>
       </section>
 
