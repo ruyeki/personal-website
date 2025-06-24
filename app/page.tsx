@@ -33,6 +33,8 @@ export default function Home() {
       <Experience />
       <br/>
       <Project />
+      <br />
+       <h3 className="vertical-timeline-element-title text-4xl font-extrabold text-white text-center" style = {{color: "white"}}>MORE COMING SOON...</h3>
     </div>
   );
 }
