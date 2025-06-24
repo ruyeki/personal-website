@@ -1,23 +1,38 @@
+"use client"
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
+import {Card, CardHeader, CardBody, CardFooter} from "@heroui/card";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-;
+import Timeline from "@/components/timeline";
+import About from "../components/about";
+import Intro from "@/components/intro";
+import Experience from "@/components/experience";
+import Project from "@/components/project";
+
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+    const [isVisible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => setVisible(true), 100);
+        return () => clearTimeout(timeout);
+    }, []);
+
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Hi, I'm&nbsp;</span>
-        <span className={title({ color: "violet" })}>Ryan!&nbsp;</span>
-        <br />
-        <span className={title()}>
-          Welcome to my website.
-        </span>
-      </div>
-    </section>
+    <div>
+      <Intro />
+            <br/>
+      <About />
+            <br/>
+      <Experience />
+      <br/>
+      <Project />
+    </div>
   );
 }

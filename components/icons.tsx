@@ -1,6 +1,12 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import Image from "next/image";
+import codelab from "@/assets/codelab.jpg"
+import persist from "@/assets/persist-logo.jpg"
+import aggiesportsanalytics from "@/assets/aggiesportsanalytics.jpg"
+import libretext from "@/assets/libretexts.png"
+import cea from "@/assets/cea.jpg"
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -212,3 +218,63 @@ export const SearchIcon = (props: IconSvgProps) => (
     />
   </svg>
 );
+
+export const CodeLabIcon = () => {
+  return (
+    <Image
+      src={codelab}
+      alt="Codelab Icon"
+      width={80}
+      height={80}
+      style={{ borderRadius: 30 }}
+    />
+  );
+};
+
+export const PersistIcon = () => {
+  return (
+    <Image
+      src={persist}
+      alt="Persist Icon"
+      width={80}
+      height={80}
+      style={{ borderRadius: 30 }}
+    />
+  );
+};
+
+export const ASAIcon = () => {
+  return (
+    <Image
+      src={aggiesportsanalytics}
+      alt="ASA Icon"
+      width={80}
+      height={80}
+      style={{ borderRadius: 30 }}
+    />
+  );
+};
+
+export const LibretextIcon = () => {
+  return (
+    <Image
+      src={libretext}
+      alt="Libretext Icon"
+      width={80}
+      height={80}
+      style={{ borderRadius: 30 }}
+    />
+  );
+};
+
+export const CEAIcon = () => {
+  return (
+    <Image
+      src={cea}
+      alt="CEA Icon"
+      width={80}
+      height={80}
+      style={{ borderRadius: 30 }}
+    />
+  );
+};
