@@ -22,6 +22,8 @@ export default function Intro() {
                     1000, // wait 1s before replacing "Mice" with "Hamsters"
                     'a Software Engineer.',
                     1000,
+                    'a UC Davis graduate.',
+                    1000,
                     'a sports enthusiast.',
                     1000
                 ]}

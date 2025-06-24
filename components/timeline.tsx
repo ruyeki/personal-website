@@ -89,9 +89,9 @@ const Timeline = () => (
       iconStyle={{ background: 'orange', color: '#fff' }}
       icon = {<LibretextIcon/>}
     >
-      <h2 className="vertical-timeline-element-title" style = {{color: "white"}}>Site Reliability Engineer</h2>
-      <h4 className="vertical-timeline-element-subtitle">Libretexts</h4>
-            <ul className=" mt-4 text-base text-gray-200 list-disc list-inside text-white">
+      <h3 className="vertical-timeline-element-title text-4xl font-extrabold text-white" style = {{color: "white"}}>Site Reliability Engineer</h3>
+      <h4 className="vertical-timeline-element-subtitle text-lg text-gray-300">Libretexts</h4>
+      <ul className=" mt-4 text-base text-gray-200 list-disc list-inside text-white">
         <li>Maintained a large Kubernetes cluster that ran the Jupyterhub website, utilized by thousands of students and teachers nationwide.</li>
         <br />
         <li>Developed queries for Prometheus that would allowed admin to easily view key user statistics.</li>
@@ -106,9 +106,9 @@ const Timeline = () => (
       iconStyle={{ background: 'orange', color: '#fff' }}
       icon = {<CEAIcon/>}
     >
-      <h2 className="vertical-timeline-element-title" style = {{color: "white"}}>Software Engineer Intern</h2>
-      <h4 className="vertical-timeline-element-subtitle">Clean Energy Associates</h4>
-                  <ul className=" mt-4 text-base text-gray-200 list-disc list-inside text-white">
+      <h3 className="vertical-timeline-element-title text-4xl font-extrabold text-white" style = {{color: "white"}}>Software Engineer Intern</h3>
+      <h4 className="vertical-timeline-element-subtitle text-lg text-gray-300">Clean Energy Associates</h4>
+      <ul className=" mt-4 text-base text-gray-200 list-disc list-inside text-white">
         <li>Performed upkeep on the company&apos;s Project Data Collector application using React.</li>
         <br />
         <li>Spearheaded the integration of DocuSign within the company.</li>
