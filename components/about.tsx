@@ -1,10 +1,12 @@
 import { title, subtitle } from "@/components/primitives";
 import Image from "next/image";
 import profile from "@/assets/profile.jpg";
+import FadeInCenter from "./animations/motion";
 
 export default function About() {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-8 md:py-12 px-4">
+    <div className="flex min-h-screen flex-col md:flex-row items-start justify-between gap-10 py-8 md:py-12 px-4">
+      <FadeInCenter delay={1}>
       <section className="flex-1 max-w-2xl" >
         <span className={subtitle()}>INTRODUCTION</span>
         <h2 className={title({ color: "violet" })}>About Me.</h2>
@@ -20,7 +22,7 @@ export default function About() {
           When I&apos;m not working, you&apos;ll find me playing a game of pickup basketball, working out, or in bed scrolling on TikTok.
         </p>
       </section>
-
+          </FadeInCenter>
       <Image
         src={profile}
         alt="Profile picture"
@@ -30,5 +32,6 @@ export default function About() {
         style = {{marginTop: 50}}
       />
     </div>
+
   );
 }

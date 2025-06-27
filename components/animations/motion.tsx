@@ -14,7 +14,7 @@ export default function FadeInCenter({ children, delay = 0 }: FadeInProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay }}
-      className = "justify-center text-center"
+      className = "justify-left text-left"
     >
       {children}
     </motion.div>
