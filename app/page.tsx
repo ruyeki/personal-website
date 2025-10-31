@@ -12,6 +12,7 @@ import About from "../components/about";
 import Intro from "@/components/intro";
 import Experience from "@/components/experience";
 import Project from "@/components/project";
+import Skills from "@/components/skills";
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -25,16 +26,15 @@ export default function Home() {
     }, []);
 
   return (
-    <div>
+    <main className="container mx-auto max-w-7xl px-6 flex-grow">
       <Intro />
-            <br/>
       <About />
-            <br/>
       <Experience />
-      <br/>
       <Project />
-      <br />
-       <h3 className="vertical-timeline-element-title text-4xl font-extrabold text-white text-center" style = {{color: "white"}}>MORE COMING SOON...</h3>
-    </div>
+      <Skills />
+      <div className="text-center py-8">
+        <h3 className="text-4xl font-extrabold">MORE COMING SOON...</h3>
+      </div>
+    </main>
   );
 }
