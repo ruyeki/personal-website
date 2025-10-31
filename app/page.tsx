@@ -32,9 +32,6 @@ export default function Home() {
       <Experience />
       <Project />
       <Skills />
-      <div className="text-center py-8">
-        <h3 className="text-4xl font-extrabold">MORE COMING SOON...</h3>
-      </div>
     </main>
   );
 }
