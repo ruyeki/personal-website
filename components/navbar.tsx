@@ -53,8 +53,12 @@ export const Navbar = () => {
         </NavbarItem>
 
         <NavbarItem className="hidden md:flex">
-          <Button>
-          Contact Me
+          <Button
+            as={Link}
+            href={siteConfig.links.email}
+            className="bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 transition-all duration-300"
+          >
+            Contact Me
           </Button>
         </NavbarItem>
       </NavbarContent>
