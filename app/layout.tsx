@@ -8,11 +8,8 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import ScrollWrapper from "@/components/ScrollWrapper";
-
 
 export const metadata: Metadata = {
-
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
@@ -32,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className="scroll-smooth">
+    <html suppressHydrationWarning className="scroll-smooth" lang="en">
       <head />
 
       <body
@@ -54,13 +51,10 @@ export default function RootLayout({
                 className="flex items-center gap-1 text-current"
                 href="https://heroui.com?utm_source=next-app-template"
                 title="heroui.com homepage"
-              >
-
-              </Link>
+              />
             </footer>
           </div>
         </Providers>
-
       </body>
     </html>
   );

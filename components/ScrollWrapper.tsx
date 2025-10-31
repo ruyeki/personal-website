@@ -6,7 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
 
-export default function ScrollWrapper({ children }: { children: React.ReactNode }) {
+export default function ScrollWrapper({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const smoother = useRef<ScrollSmoother | null>(null);
 
   useGSAP(() => {

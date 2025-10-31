@@ -62,7 +62,8 @@ export const siteConfig = {
   links: {
     github: "https://github.com/ruyeki",
     linkedin: "https://www.linkedin.com/in/ruyeki/",
-    resume: "https://drive.google.com/file/d/1s2ZzQB5sp8JqTm-VVtWetvg0s513Ideu/view?usp=drive_link",
+    resume:
+      "https://drive.google.com/file/d/1s2ZzQB5sp8JqTm-VVtWetvg0s513Ideu/view?usp=drive_link",
     sponsor: "https://patreon.com/jrgarciadev",
     email: "mailto:ruyeki2003@gmail.com",
   },

@@ -1,49 +1,43 @@
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
-  NavbarMenu,
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
 } from "@heroui/navbar";
 import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
-import { link as linkStyles } from "@heroui/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  LinkedinIcon,
-  GithubIcon,
-  ResumeIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { LinkedinIcon, GithubIcon, ResumeIcon } from "@/components/icons";
 
 export const Navbar = () => {
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarBrand>
-        <h1 className = "text-3xl font-bold" style = {{color: "violet", cursor: "pointer"}}>Ryan Uyeki</h1>
+        <h1
+          className="text-3xl font-bold"
+          style={{ color: "violet", cursor: "pointer" }}
+        >
+          Ryan Uyeki
+        </h1>
       </NavbarBrand>
 
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
+        <NavbarItem className="hidden sm:flex gap-2" />
         <NavbarItem className="hidden sm:flex gap-2">
-        </NavbarItem>
-        <NavbarItem className="hidden sm:flex gap-2">
-            <Link isExternal aria-label="Resume" href={siteConfig.links.resume}>
+          <Link isExternal aria-label="Resume" href={siteConfig.links.resume}>
             <ResumeIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.linkedin}>
+          <Link
+            isExternal
+            aria-label="Twitter"
+            href={siteConfig.links.linkedin}
+          >
             <LinkedinIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
@@ -55,8 +49,8 @@ export const Navbar = () => {
         <NavbarItem className="hidden md:flex">
           <Button
             as={Link}
-            href={siteConfig.links.email}
             className="bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 transition-all duration-300"
+            href={siteConfig.links.email}
           >
             Contact Me
           </Button>
@@ -70,7 +64,6 @@ export const Navbar = () => {
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
-
     </HeroUINavbar>
   );
 };

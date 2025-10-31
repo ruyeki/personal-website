@@ -1,12 +1,12 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { IconSvgProps } from "@/types";
-import Image from "next/image";
-import codelab from "@/assets/codelab.jpg"
-import persist from "@/assets/persist-logo.jpg"
-import aggiesportsanalytics from "@/assets/aggiesportsanalytics.jpg"
-import libretext from "@/assets/libretexts.png"
-import cea from "@/assets/cea.jpg"
+import codelab from "@/assets/codelab.jpg";
+import persist from "@/assets/persist-logo.jpg";
+import aggiesportsanalytics from "@/assets/aggiesportsanalytics.jpg";
+import libretext from "@/assets/libretexts.png";
+import cea from "@/assets/cea.jpg";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -37,27 +37,28 @@ export const ResumeIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-    <svg 
-    fill="none"
-    height={size || height}
-    viewBox="0 0 32 32"
-    width={size || width}
-    {...props}
-    style={{marginTop:10,marginRight:-10}}
->
-  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-  <g id="SVGRepo_iconCarrier">
-    <path 
-
-      d="M9.29289 1.29289C9.48043 1.10536 9.73478 1 10 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V8C3 7.73478 3.10536 7.48043 3.29289 7.29289L9.29289 1.29289ZM18 3H11V8C11 8.55228 10.5523 9 10 9H5V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3ZM6.41421 7H9V4.41421L6.41421 7ZM7 13C7 12.4477 7.44772 12 8 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H8C7.44772 14 7 13.5523 7 13ZM7 17C7 16.4477 7.44772 16 8 16H16C16.5523 16 17 16.4477 17 17C17 17.5523 16.5523 18 16 18H8C7.44772 18 7 17.5523 7 17Z" 
-      fill="currentColor"
-    />
-  </g>
-</svg>
-
-  )
-
+    <svg
+      fill="none"
+      height={size || height}
+      viewBox="0 0 32 32"
+      width={size || width}
+      {...props}
+      style={{ marginTop: 10, marginRight: -10 }}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M9.29289 1.29289C9.48043 1.10536 9.73478 1 10 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V8C3 7.73478 3.10536 7.48043 3.29289 7.29289L9.29289 1.29289ZM18 3H11V8C11 8.55228 10.5523 9 10 9H5V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3ZM6.41421 7H9V4.41421L6.41421 7ZM7 13C7 12.4477 7.44772 12 8 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H8C7.44772 14 7 13.5523 7 13ZM7 17C7 16.4477 7.44772 16 8 16H16C16.5523 16 17 16.4477 17 17C17 17.5523 16.5523 18 16 18H8C7.44772 18 7 17.5523 7 17Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
 };
 
 export const LinkedinIcon: React.FC<IconSvgProps> = ({
@@ -67,16 +68,15 @@ export const LinkedinIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-
-    <svg xmlns="http://www.w3.org/2000/svg" 
-
+    <svg
       height={size || height}
       viewBox="0 0 24 24"
       width={size || width}
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
-    
     >
-  <path d="
+      <path
+        d="
     M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18
     c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z
 
@@ -91,11 +91,10 @@ export const LinkedinIcon: React.FC<IconSvgProps> = ({
     c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04
     c0.394-0.746,1.356-1.533,2.791-1.533
     c2.987,0,3.539,1.966,3.539,4.522V22z
-  " 
-  
-  fill="currentColor"/>
-</svg>
-
+  "
+        fill="currentColor"
+      />
+    </svg>
   );
 };
 
@@ -222,11 +221,11 @@ export const SearchIcon = (props: IconSvgProps) => (
 export const CodeLabIcon = () => {
   return (
     <Image
-      src={codelab}
       alt="Codelab Icon"
-      width={80}
       height={80}
+      src={codelab}
       style={{ borderRadius: 30 }}
+      width={80}
     />
   );
 };
@@ -234,11 +233,11 @@ export const CodeLabIcon = () => {
 export const PersistIcon = () => {
   return (
     <Image
-      src={persist}
       alt="Persist Icon"
-      width={80}
       height={80}
+      src={persist}
       style={{ borderRadius: 30 }}
+      width={80}
     />
   );
 };
@@ -246,11 +245,11 @@ export const PersistIcon = () => {
 export const ASAIcon = () => {
   return (
     <Image
-      src={aggiesportsanalytics}
       alt="ASA Icon"
-      width={80}
       height={80}
+      src={aggiesportsanalytics}
       style={{ borderRadius: 30 }}
+      width={80}
     />
   );
 };
@@ -258,11 +257,11 @@ export const ASAIcon = () => {
 export const LibretextIcon = () => {
   return (
     <Image
-      src={libretext}
       alt="Libretext Icon"
-      width={80}
       height={80}
+      src={libretext}
       style={{ borderRadius: 30 }}
+      width={80}
     />
   );
 };
@@ -270,11 +269,11 @@ export const LibretextIcon = () => {
 export const CEAIcon = () => {
   return (
     <Image
-      src={cea}
       alt="CEA Icon"
-      width={80}
       height={80}
+      src={cea}
       style={{ borderRadius: 30 }}
+      width={80}
     />
   );
 };
