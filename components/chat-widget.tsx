@@ -15,7 +15,13 @@ export default function ChatWidget() {
     Array<{ text: string; sender: "user" | "bot" }>
   >([
     {
-      text: "Hi! Thanks for visiting my website. Feel free to ask me anything!",
+      text: `Hi! Thanks for visiting my website. Feel free to ask me anything!
+
+Examples of valid queries include:
+1. What are your strengths as a Software Engineer?
+2. What are some projects you've completed recently?
+3. Why are you so handsome?
+4. What work experience do you have?`,
       sender: "bot",
     },
   ]);
@@ -165,7 +171,7 @@ export default function ChatWidget() {
                             : "bg-gray-800 text-gray-200"
                         }`}
                       >
-                        <p className="text-sm">{message.text}</p>
+                        <p className="text-sm whitespace-pre-line">{message.text}</p>
                       </div>
                     </motion.div>
                   ))}
