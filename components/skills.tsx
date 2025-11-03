@@ -24,19 +24,14 @@ export default function Skills() {
       ],
       gradient: "from-purple-600 to-pink-600",
     },
-    {
-      title: "Languages",
-      skills: ["Native English", "Conversational Japanese"],
-      gradient: "from-pink-600 to-violet-600",
-    },
   ];
 
   return (
-    <section className="relative py-20 px-4">
+    <section className="relative py-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-purple-500/5" />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-4">
         <motion.div
           className="text-left mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +50,7 @@ export default function Skills() {
           <h2 className={title({ color: "violet" })}>Technical Skills.</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
