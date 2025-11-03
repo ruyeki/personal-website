@@ -4,8 +4,16 @@ import { motion } from "framer-motion";
 
 import { title, subtitle } from "@/components/primitives";
 
+interface ProjectType {
+  title: string;
+  tech: string;
+  description: string[];
+  github: string | null;
+  website?: string;
+}
+
 export default function Project() {
-  const projects = [
+  const projects: ProjectType[] = [
     {
       title: "AI Karthik",
       tech: "Python, Langchain, OpenRouter, Gemini, Chroma, SQLite, React, Flask",
@@ -34,6 +42,28 @@ export default function Project() {
         "Implemented timeline views, project dashboards, booking for lab resources, and an interactive UI to enhance productivity.",
       ],
       github: null,
+    },
+    {
+      title: "D2D Cure - Siegel Lab Data Platform",
+      tech: "Next.js, TypeScript, Tailwind CSS, Prisma, MySQL, Firebase, NextUI",
+      description: [
+        "Revamped the Siegel Lab's protein data collection website used by 40+ institutions and 1000+ students across the country.",
+        "Leveraged Next.js, TypeScript, Tailwind, Prisma, and MySQL to develop a platform for seamless student login and data uploads.",
+        "Implemented user authentication and level-based authorization using Firebase, along with a user management page for administrators to approve/delete users within their institution.",
+        "Recreated the frontend of the website to the design team's specifications using NextUI.",
+      ],
+      github: "https://github.com/d2dcure/d2d-cure",
+    },
+    {
+      title: "NBA Slider Stats",
+      tech: "Python, NBA API, Streamlit",
+      description: [
+        "Developed an interactive web application allowing users to customize stat preferences with sliders to generate personalized NBA player rankings.",
+        "Integrated the NBA API to fetch real-time player statistics and dynamically rank all active NBA players based on user-selected criteria.",
+        "Deployed on Streamlit to provide an intuitive and responsive user experience for basketball analytics enthusiasts.",
+      ],
+      github: null,
+      website: "https://sliderstats.streamlit.app/",
     },
   ];
 
@@ -105,19 +135,34 @@ export default function Project() {
                     ))}
                   </ul>
                 </CardBody>
-                {project.github && (
-                  <CardFooter className="pt-4">
-                    <Link
-                      className="text-violet-400 hover:text-violet-300 font-semibold flex items-center gap-2 group/link"
-                      href={project.github}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <span>View on GitHub</span>
-                      <span className="group-hover/link:translate-x-1 transition-transform duration-300">
-                        →
-                      </span>
-                    </Link>
+                {(project.github || project.website) && (
+                  <CardFooter className="pt-4 flex gap-4">
+                    {project.github && (
+                      <Link
+                        className="text-violet-400 hover:text-violet-300 font-semibold flex items-center gap-2 group/link"
+                        href={project.github}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span>View on GitHub</span>
+                        <span className="group-hover/link:translate-x-1 transition-transform duration-300">
+                          →
+                        </span>
+                      </Link>
+                    )}
+                    {project.website && (
+                      <Link
+                        className="text-violet-400 hover:text-violet-300 font-semibold flex items-center gap-2 group/link"
+                        href={project.website}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span>View Website</span>
+                        <span className="group-hover/link:translate-x-1 transition-transform duration-300">
+                          →
+                        </span>
+                      </Link>
+                    )}
                   </CardFooter>
                 )}
               </Card>

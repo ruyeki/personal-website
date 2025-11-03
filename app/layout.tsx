@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import ChatWidget from "@/components/chat-widget";
 
 export const metadata: Metadata = {
   description: siteConfig.description,
@@ -54,6 +55,7 @@ export default function RootLayout({
               />
             </footer>
           </div>
+          <ChatWidget />
         </Providers>
       </body>
     </html>
