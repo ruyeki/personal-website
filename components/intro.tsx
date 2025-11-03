@@ -11,10 +11,10 @@ export default function Intro() {
   return (
     <div className="relative">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-purple-500/10 animate-gradient" />
+      <div className="absolute inset-0 left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-gradient-to-br from-violet-500/10 via-transparent to-purple-500/10 animate-gradient" />
 
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-600/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-600/20 via-transparent to-transparent" />
 
       <FadeInCenter delay={0.5}>
         <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">

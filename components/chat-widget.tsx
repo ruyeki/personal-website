@@ -34,8 +34,11 @@ export default function ChatWidget() {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify({ inputMessage }),
         });
+
+        console.log(response)
 
         const llm_response = await response.json();
 
