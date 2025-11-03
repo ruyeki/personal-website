@@ -8,7 +8,13 @@ import {
 } from "react-vertical-timeline-component";
 
 import "react-vertical-timeline-component/style.min.css";
-import { PersistIcon, CodeLabIcon, ASAIcon, LibretextIcon, CEAIcon } from "./icons";
+import {
+  PersistIcon,
+  CodeLabIcon,
+  ASAIcon,
+  LibretextIcon,
+  CEAIcon,
+} from "./icons";
 
 const Timeline = () => (
   <div className=" w-full  max-w-4xl flex justify-center px-4">
@@ -103,7 +109,7 @@ const Timeline = () => (
           </h4>
           <ul className="mt-4 text-base text-gray-200 list-disc list-inside">
             <li>
-              Rebuilt the Siegel Lab's enzyme web database, serving over 40
+              Rebuilt the Siegel Lab&apos;s enzyme web database, serving over 40
               undergraduate institutions and 1000 students nationwide by
               transitioning the tech stack from PHP to a modern React, Next.js,
               and Typescript framework.
@@ -117,7 +123,7 @@ const Timeline = () => (
               approve/delete selected users within their institution.
             </li>
             <li>
-              Recreated the frontend of the website to the design team's
+              Recreated the frontend of the website to the design team&apos;s
               specifications using NextUI and Tailwind CSS.
             </li>
           </ul>
@@ -142,13 +148,18 @@ const Timeline = () => (
           </h4>
           <ul className="mt-4 text-base text-gray-200 list-disc list-inside">
             <li>
-              Developed Scout AI Application during Winter and Spring 2024-2025 quarters to provide AI-powered sports analytics and scouting insights.
+              Developed Scout AI Application during Winter and Spring 2024-2025
+              quarters to provide AI-powered sports analytics and scouting
+              insights.
             </li>
             <li>
-              Built NBA Slider Stats app enabling users to customize stat preferences with interactive sliders and generate personalized NBA player rankings based on selected criteria.
+              Built NBA Slider Stats app enabling users to customize stat
+              preferences with interactive sliders and generate personalized NBA
+              player rankings based on selected criteria.
             </li>
             <li>
-              Utilized Python and the NBA API to create a data-driven platform for sports analytics and player evaluation.
+              Utilized Python and the NBA API to create a data-driven platform
+              for sports analytics and player evaluation.
             </li>
           </ul>
         </VerticalTimelineElement>
@@ -172,16 +183,20 @@ const Timeline = () => (
           </h4>
           <ul className="mt-4 text-base text-gray-200 list-disc list-inside">
             <li>
-              Ensured functionality of an expansive Kubernetes cluster running educational software used by students and teachers alike.
+              Ensured functionality of an expansive Kubernetes cluster running
+              educational software used by students and teachers alike.
             </li>
             <li>
-              Implemented custom PromQL queries for real-time tracking of key user behaviors, including pod-spawning and cluster utilization.
+              Implemented custom PromQL queries for real-time tracking of key
+              user behaviors, including pod-spawning and cluster utilization.
             </li>
             <li>
-              Implemented interactive HTML components to the JupyterHub website, culminating in a 10% increase in website usage.
+              Implemented interactive HTML components to the JupyterHub website,
+              culminating in a 10% increase in website usage.
             </li>
             <li>
-              Improved software documentation accuracy to increase future team efficiency.
+              Improved software documentation accuracy to increase future team
+              efficiency.
             </li>
           </ul>
         </VerticalTimelineElement>
@@ -205,13 +220,17 @@ const Timeline = () => (
           </h4>
           <ul className="mt-4 text-base text-gray-200 list-disc list-inside">
             <li>
-              Collaborated with 15+ software developers, participating in daily stand-ups for smooth communication and operational efficiency.
+              Collaborated with 15+ software developers, participating in daily
+              stand-ups for smooth communication and operational efficiency.
             </li>
             <li>
-              Employed React to reduce bug backlog by 20% by resolving issues for the company's Project Data Collector application.
+              Employed React to reduce bug backlog by 20% by resolving issues
+              for the company&apos;s Project Data Collector application.
             </li>
             <li>
-              Played an instrumental role in integrating DocuSign within the company's operations by helping lead the implementation process.
+              Played an instrumental role in integrating DocuSign within the
+              company&apos;s operations by helping lead the implementation
+              process.
             </li>
           </ul>
         </VerticalTimelineElement>

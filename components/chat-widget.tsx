@@ -6,6 +6,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
 import Image from "next/image";
+
 import profile from "@/assets/profile.jpg";
 
 export default function ChatWidget() {
@@ -28,42 +29,41 @@ export default function ChatWidget() {
       setIsLoading(true);
 
       try {
-
-        const response = await fetch('http://127.0.0.1:5000/chat', {
-          method: 'POST',
+        const response = await fetch("https://personal-website-backend-q46x.onrender.com/chat", {
+          method: "POST",
           headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ inputMessage }),
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ inputMessage }),
         });
 
         const llm_response = await response.json();
-        console.log(llm_response['data'])
 
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: llm_response['data'],
-            sender: "bot",
-          },
-        ]);
-        setIsLoading(false);
-      }, 1000);
-      } catch (error){
+        console.log(llm_response["data"]);
+
+        setTimeout(() => {
+          setMessages((prev) => [
+            ...prev,
+            {
+              text: llm_response["data"],
+              sender: "bot",
+            },
+          ]);
+          setIsLoading(false);
+        }, 1000);
+      } catch (error) {
         console.error(error);
         setTimeout(() => {
-        setMessages((prev) => [
+          setMessages((prev) => [
             ...prev,
             {
               text: "Error generating a response. Please try again!",
               sender: "bot",
             },
           ]);
-        setIsLoading(false);
+          setIsLoading(false);
         }, 1000);
-        }
-
+      }
     }
   };
 
@@ -71,14 +71,14 @@ export default function ChatWidget() {
     <>
       {/* Chat Button */}
       <motion.div
+        animate={{ scale: 1 }}
         className="fixed bottom-6 right-6 z-50"
         initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
       >
         <Button
-          className="h-14 w-14 rounded-full bg-gradient-to-r from-violet-600 to-purple-600 text-white shadow-lg shadow-violet-500/50 hover:shadow-violet-500/70 hover:scale-110 transition-all duration-300"
           isIconOnly
+          className="h-14 w-14 rounded-full bg-gradient-to-r from-violet-600 to-purple-600 text-white shadow-lg shadow-violet-500/50 hover:shadow-violet-500/70 hover:scale-110 transition-all duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
@@ -117,8 +117,8 @@ export default function ChatWidget() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)]"
             animate={{ opacity: 1, y: 0, scale: 1 }}
+            className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)]"
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
@@ -138,7 +138,10 @@ export default function ChatWidget() {
                       key={index}
                       animate={{ opacity: 1, x: 0 }}
                       className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"} items-end gap-2`}
-                      initial={{ opacity: 0, x: message.sender === "user" ? 20 : -20 }}
+                      initial={{
+                        opacity: 0,
+                        x: message.sender === "user" ? 20 : -20,
+                      }}
                       transition={{ duration: 0.3 }}
                     >
                       {message.sender === "bot" && (
