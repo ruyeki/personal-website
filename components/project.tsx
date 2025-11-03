@@ -68,11 +68,11 @@ export default function Project() {
   ];
 
   return (
-    <section className="relative min-h-screen py-20 px-4">
+    <section className="relative min-h-screen py-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-violet-500/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-gradient-to-tr from-violet-500/5 via-transparent to-purple-500/5" />
 
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-4xl mx-auto px-4">
         <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}

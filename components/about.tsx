@@ -8,11 +8,11 @@ import { title, subtitle } from "@/components/primitives";
 
 export default function About() {
   return (
-    <div className="relative min-h-screen py-20 px-4">
+    <div className="relative min-h-screen py-20">
       {/* Background gradient accent */}
-      <div className="absolute inset-0 bg-gradient-to-bl from-violet-500/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-gradient-to-bl from-violet-500/5 via-transparent to-purple-500/5" />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           <FadeInCenter delay={1}>
             <motion.section

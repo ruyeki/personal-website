@@ -5,11 +5,11 @@ import { title, subtitle } from "@/components/primitives";
 
 export default function Experience() {
   return (
-    <div className="relative min-h-screen py-20 px-4">
+    <div className="relative min-h-screen py-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tl from-violet-500/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen bg-gradient-to-tl from-violet-500/5 via-transparent to-purple-500/5" />
 
-      <section className="relative max-w-6xl mx-auto mb-12" id="experience">
+      <section className="relative max-w-6xl mx-auto mb-12 px-4" id="experience">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function Experience() {
         </motion.div>
       </section>
 
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center px-4">
         <Timeline />
       </section>
     </div>
