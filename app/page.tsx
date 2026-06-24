@@ -1,20 +1,17 @@
-"use client";
-
-import About from "../components/about";
-
+import SiteHeader from "@/components/site-header";
 import Experience from "@/components/experience";
-import Intro from "@/components/intro";
+import Education from "@/components/education";
 import Project from "@/components/project";
 import Skills from "@/components/skills";
 
 export default function Home() {
   return (
-    <main className="container mx-auto max-w-7xl px-6 flex-grow">
-      <Intro />
-      <About />
+    <div className="space-y-16 pb-8">
+      <SiteHeader />
       <Experience />
+      <Education />
       <Project />
       <Skills />
-    </main>
+    </div>
   );
 }
