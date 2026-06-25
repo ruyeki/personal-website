@@ -14,9 +14,7 @@ export default function Education() {
         </div>
         <p className="text-foreground/85">B.S. Computer Science</p>
         <p className="mt-2 text-sm leading-relaxed text-[#c9a36b]">
-          Data Structures &amp; Algorithms, Operating Systems, Computer
-          Networks, Databases, Computer Architecture, Web Programming, Software
-          Engineering, Discrete Mathematics
+          Data Structures &amp; Algorithms, Operating Systems, Computer Architecture, Web Programming, Discrete Mathematics, Object Oriented Programming, Intro to Machine Learning, Intro to Artifical Intelligence, Intro to Computer Vision
         </p>
       </div>
     </section>

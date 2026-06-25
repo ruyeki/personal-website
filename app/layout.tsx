@@ -10,7 +10,7 @@ import { Navbar } from "@/components/navbar";
 export const metadata: Metadata = {
   title: "Ryan Uyeki",
   description:
-    "Ryan Uyeki — Software Engineer. Full-stack and AI/ML, based in Davis, CA.",
+    "Ryan Uyeki — Software Engineer based in Sacramento, CA.",
   icons: {
     icon: "/favicon.ico",
   },

@@ -38,8 +38,7 @@ export default function SiteHeader() {
           >
             Persist AI
           </a>{" "}
-          building full-stack and AI-powered products. UC Davis graduate,
-          basketball player since age 5, and all-around sports enthusiast.
+          building full-stack and AI-powered products. UC Davis graduate and all-around sports enthusiast.
         </p>
 
         <div className="mt-5 flex items-center justify-center gap-5 sm:justify-start">
