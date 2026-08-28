@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TOKENS
+   Dark is the default (this is a terminal). `.light` on <html>
+   opts into the paper theme; the no-flash script in layout.tsx
+   sets that class before first paint.
+   ============================================================ */
+
+:root {
+  --bg:            #0a0e13;
+  --bg-elev:       #0f151c;
+  --bg-inset:      #131b24;
+  --bg-hover:      #16202b;
+
+  --border:        #1f2b36;
+  --border-strong: #2c3b49;
+
+  --fg:            #dfe7ef;
+  --fg-muted:      #8697a8;
+  --fg-faint:      #56646f;
+
+  --accent:        #f5a524;   /* prompt / branch / HEAD */
+  --accent-bg:     rgba(245, 165, 36, 0.10);
+  --accent-br:     rgba(245, 165, 36, 0.32);
+
+  --add:           #56d364;
+  --add-bg:        rgba(86, 211, 100, 0.10);
+  --add-gutter:    rgba(86, 211, 100, 0.16);
+
+  --rem:           #f7768e;
+  --rem-bg:        rgba(247, 118, 142, 0.09);
+  --rem-gutter:    rgba(247, 118, 142, 0.15);
+
+  --link:          #6cb6ff;
+  --branch:        #c39ac9;
+  --hash:          #7ee0c4;
+
+  --shadow:        0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+:root.light {
+  --bg:            #fbfaf7;
+  --bg-elev:       #ffffff;
+  --bg-inset:      #f4f2ed;
+  --bg-hover:      #f0ede5;
+
+  --border:        #e4e0d6;
+  --border-strong: #cdc7b8;
+
+  --fg:            #14181d;
+  --fg-muted:      #59626d;
+  --fg-faint:      #8a939e;
+
+  --accent:        #a96509;
+  --accent-bg:     rgba(169, 101, 9, 0.08);
+  --accent-br:     rgba(169, 101, 9, 0.28);
+
+  --add:           #1a7f37;
+  --add-bg:        rgba(26, 127, 55, 0.08);
+  --add-gutter:    rgba(26, 127, 55, 0.14);
+
+  --rem:           #cf222e;
+  --rem-bg:        rgba(207, 34, 46, 0.06);
+  --rem-gutter:    rgba(207, 34, 46, 0.12);
+
+  --link:          #0b62d6;
+  --branch:        #7c3fbf;
+  --hash:          #0d7a68;
+
+  --shadow:        0 1px 2px rgba(20,24,29,.05), 0 8px 24px -14px rgba(20,24,29,.18);
+}
+
+@theme inline {
+  --color-bg:            var(--bg);
+  --color-elev:          var(--bg-elev);
+  --color-inset:         var(--bg-inset);
+  --color-hover:         var(--bg-hover);
+  --color-line:          var(--border);
+  --color-line-strong:   var(--border-strong);
+  --color-fg:            var(--fg);
+  --color-muted:         var(--fg-muted);
+  --color-faint:         var(--fg-faint);
+  --color-accent:        var(--accent);
+  --color-add:           var(--add);
+  --color-rem:           var(--rem);
+  --color-link:          var(--link);
+  --color-branch:        var(--branch);
+  --color-hash:          var(--hash);
+
+  --font-mono:  var(--font-jb), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans:  var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+* { border-color: var(--border); }
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+html.light { color-scheme: light; }
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-jb), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Faint grid, like a diff canvas. Fades out down the page. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: .35;
+  mask-image: radial-gradient(120% 70% at 50% 0%, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(120% 70% at 50% 0%, #000 0%, transparent 72%);
+}
+:root.light body::before { opacity: .6; }
+
+::selection { background: var(--accent-bg); color: var(--fg); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+html.transitions-off *,
+html.transitions-off *::before,
+html.transitions-off *::after { transition: none !important; }
+
+/* ============================================================
+   PRIMITIVES
+   ============================================================ */
+
+.shell { max-width: 62rem; margin-inline: auto; padding-inline: 1.25rem; position: relative; z-index: 1; }
+@media (min-width: 768px) { .shell { padding-inline: 2rem; } }
+
+.panel {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* The grey bar at the top of every file / diff box */
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: .5rem .75rem;
+  background: var(--bg-inset);
+  border-bottom: 1px solid var(--border);
+  font-size: 11.5px;
+  letter-spacing: .02em;
+  color: var(--fg-muted);
+  flex-wrap: wrap;
+}
+
+.mono-label {
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* Pills ------------------------------------------------------ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .125rem .5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: var(--fg-muted);
+  background: var(--bg-inset);
+}
+.pill--branch { color: var(--accent); border-color: var(--accent-br); background: var(--accent-bg); }
+.pill--merged { color: var(--branch); border-color: color-mix(in srgb, var(--branch) 35%, transparent); background: color-mix(in srgb, var(--branch) 10%, transparent); }
+.pill--open   { color: var(--add); border-color: color-mix(in srgb, var(--add) 35%, transparent); background: var(--add-bg); }
+
+.dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; flex: none; }
+.dot--live { animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 70%, transparent); }
+  70%  { box-shadow: 0 0 0 6px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Diff rows -------------------------------------------------- */
+.diff { font-size: 13px; line-height: 1.75; }
+
+.diff-row {
+  display: grid;
+  grid-template-columns: 2.75rem 1.25rem 1fr;
+  align-items: start;
+  border-left: 3px solid transparent;
+}
+.diff-row > .ln {
+  padding: .0625rem .5rem;
+  text-align: right;
+  font-size: 11px;
+  color: var(--fg-faint);
+  user-select: none;
+  background: var(--bg-inset);
+  border-right: 1px solid var(--border);
+}
+.diff-row > .sign {
+  padding: .0625rem 0 .0625rem .5rem;
+  user-select: none;
+  font-weight: 600;
+}
+.diff-row > .txt { padding: .0625rem .75rem .0625rem .25rem; }
+
+.diff-row--add            { background: var(--add-bg); border-left-color: var(--add-gutter); }
+.diff-row--add > .sign    { color: var(--add); }
+.diff-row--add > .ln      { background: var(--add-gutter); color: color-mix(in srgb, var(--add) 75%, var(--fg-faint)); }
+
+.diff-row--rem            { background: var(--rem-bg); border-left-color: var(--rem-gutter); }
+.diff-row--rem > .sign    { color: var(--rem); }
+.diff-row--rem > .ln      { background: var(--rem-gutter); color: color-mix(in srgb, var(--rem) 75%, var(--fg-faint)); }
+
+.diff-row--ctx > .txt     { color: var(--fg-muted); }
+
+.diff-hunk {
+  padding: .1875rem .75rem .1875rem 4rem;
+  font-size: 11.5px;
+  color: var(--fg-faint);
+  background: color-mix(in srgb, var(--branch) 7%, transparent);
+  border-block: 1px solid var(--border);
+}
+
+
+/* Prose ------------------------------------------------------
+   Mono is the site's voice, but paragraphs of real sentences read
+   badly in it. Anything that is a sentence rather than a token gets
+   Inter; diffs, paths, hashes, and pills stay mono. */
+.prose {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.003em;
+  line-height: 1.68;
+}
+
+/* Links ------------------------------------------------------ */
+.lnk {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.lnk:hover { border-bottom-color: currentColor; }
+
+.hash { color: var(--hash); font-variant-ligatures: none; }
+
+/* Section heading, rendered as a command ---------------------- */
+.cmd {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  flex-wrap: wrap;
+  font-size: clamp(14px, 2.2vw, 16px);
+}
+.cmd .prompt { color: var(--accent); flex: none; }
+.cmd .argv   { color: var(--fg); font-weight: 600; }
+.cmd .flag   { color: var(--fg-muted); }
+
+.rule { height: 1px; background: var(--border); border: 0; }
+
+/* Reveal on scroll ------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(10px); }
+.reveal.in { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s cubic-bezier(.2,.7,.3,1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .dot--live, .caret { animation: none; }
+}
+
+/* Caret ------------------------------------------------------ */
+.caret {
+  display: inline-block;
+  width: .55em;
+  height: 1.05em;
+  vertical-align: -.16em;
+  background: var(--accent);
+  animation: blink 1.15s steps(1) infinite;
+}
+@keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+
+/* Scrollbar --------------------------------------------------
+   NOTE: these rules are unlayered, so they outrank anything Tailwind
+   emits in @layer utilities. `.no-bar` has to live here for the same
+   reason — an arbitrary variant in a utility layer can't beat it. */
+.no-bar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-bar::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 6px; border: 2px solid var(--bg); }
