@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import GitCanvas from "@/components/GitCanvas";
 import Nav from "@/components/Nav";
 import { site } from "@/content/site";
 
@@ -117,6 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <GitCanvas />
         <Nav />
         <main>{children}</main>
       </body>

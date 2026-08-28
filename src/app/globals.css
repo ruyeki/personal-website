@@ -126,11 +126,11 @@ body::before {
     linear-gradient(to right, var(--border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   background-size: 64px 64px;
-  opacity: .35;
+  opacity: .18;
   mask-image: radial-gradient(120% 70% at 50% 0%, #000 0%, transparent 72%);
   -webkit-mask-image: radial-gradient(120% 70% at 50% 0%, #000 0%, transparent 72%);
 }
-:root.light body::before { opacity: .6; }
+:root.light body::before { opacity: .4; }
 
 ::selection { background: var(--accent-bg); color: var(--fg); }
 
