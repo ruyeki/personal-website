@@ -1,0 +1,106 @@
+import type { Commit } from "./types";
+
+/**
+ * `git log` — the work history, newest first.
+ *
+ * Each commit expands into a diff of what changed because I was there.
+ * `-` lines are the world before, `+` lines are what I left behind.
+ */
+export const commits: Commit[] = [
+  {
+    hash: "a3f9c21",
+    subject: "feat(lab): make the instruments run themselves",
+    role: "Software Engineer",
+    org: "Persist AI",
+    location: "West Sacramento, CA",
+    range: "Jun 2025 — present",
+    refs: ["HEAD", "persist-ai/main"],
+    stack: ["Python", "OPC-UA", "React", "FastAPI", "LangChain", "PostgreSQL"],
+    body: [
+      { k: "rem", t: "Dissolution, stability, and formulation runs staged by hand" },
+      { k: "add", t: "OPC-UA workflows driving the ASD platform autonomously" },
+      { k: "add", t: "→ ~50% less manual work, 100–150 more samples/week" },
+      { k: "ctx", t: "" },
+      { k: "rem", t: "Reports assembled by hand from text, images, and tables" },
+      { k: "add", t: "Full-stack React app over a multi-modal RAG pipeline with" },
+      { k: "add", t: "specialized agents → 70% faster reporting" },
+      { k: "ctx", t: "" },
+      { k: "rem", t: "Microscopy captured and classified manually, slide by slide" },
+      { k: "add", t: "Python-driven Amscope workflows: XY stage control, brightfield" },
+      { k: "add", t: "imaging, particle detection, amorphous vs. crystalline calls" },
+      { k: "ctx", t: "" },
+      { k: "add", t: "Co-built CloudLab Viewer — customers upload formulation data and" },
+      { k: "add", t: "explore it live → $10k+/month in company revenue" },
+    ],
+  },
+  {
+    hash: "7b2e104",
+    subject: "feat(platform): build the tools the company runs on",
+    role: "Software Engineer Intern",
+    org: "Persist AI",
+    location: "West Sacramento, CA",
+    range: "Feb 2025 — Jun 2025",
+    stack: ["Python", "React", "SQLite", "PostgreSQL", "Data viz"],
+    body: [
+      { k: "rem", t: "Task tracking scattered across tools and a Jira subscription" },
+      { k: "add", t: "Led a custom project management platform, adopted company-wide" },
+      { k: "add", t: "→ ~$5,000/year saved, one hub for cross-functional work" },
+      { k: "ctx", t: "" },
+      { k: "rem", t: "Lab data pinned to a local SQLite file" },
+      { k: "add", t: "Python migration scripts moving it cleanly to PostgreSQL" },
+      { k: "ctx", t: "" },
+      { k: "add", t: "Olympus data platform: interactive visualization and automated" },
+      { k: "add", t: "onboarding pipelines for drug profiling" },
+    ],
+  },
+  {
+    hash: "c14d8f0",
+    subject: "refactor(d2d-cure): port a national research database off PHP",
+    role: "Software Engineer Intern",
+    org: "CodeLab · UC Davis",
+    location: "Davis, CA",
+    range: "Dec 2023 — Dec 2024",
+    stack: ["Next.js", "TypeScript", "React", "Firebase", "Tailwind CSS"],
+    body: [
+      { k: "ctx", t: "The Siegel Lab enzyme database — 40+ undergraduate institutions," },
+      { k: "ctx", t: "1,000+ students nationwide depend on it." },
+      { k: "ctx", t: "" },
+      { k: "rem", t: "Legacy PHP stack, aging and hard to extend" },
+      { k: "add", t: "Rebuilt on React, Next.js, and TypeScript" },
+      { k: "ctx", t: "" },
+      { k: "rem", t: "Ad-hoc access control" },
+      { k: "add", t: "Firebase + Google OAuth with level-based authorization" },
+      { k: "add", t: "Admin page to approve or remove users within an institution" },
+      { k: "ctx", t: "" },
+      { k: "add", t: "Rebuilt the frontend to the design team's spec (NextUI + Tailwind)" },
+    ],
+  },
+  {
+    hash: "5d0a7e3",
+    subject: "chore(infra): keep the lights on for a public textbook platform",
+    role: "Student Engineer",
+    org: "LibreTexts",
+    location: "Davis, CA",
+    range: "2024",
+    stack: ["Kubernetes", "Docker", "Linux"],
+    body: [
+      { k: "ctx", t: "LibreTexts serves free course material to students everywhere." },
+      { k: "add", t: "Managed the Kubernetes infrastructure behind it — the unglamorous" },
+      { k: "add", t: "work that decides whether the site is up during finals week" },
+    ],
+  },
+  {
+    hash: "0000000",
+    subject: "initial commit",
+    role: "B.S. Computer Science",
+    org: "University of California, Davis",
+    location: "Davis, CA",
+    range: "Sep 2021 — Jun 2025",
+    stack: ["Algorithms", "Systems", "Databases", "日本語"],
+    body: [
+      { k: "add", t: "B.S. in Computer Science" },
+      { k: "add", t: "Aggie Sports Analytics — where the basketball work started" },
+      { k: "ctx", t: "Native English, conversational Japanese." },
+    ],
+  },
+];
