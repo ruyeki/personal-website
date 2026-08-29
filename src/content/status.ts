@@ -10,7 +10,7 @@ export const statusMeta = {
   upstream: "origin/persist-ai",
   since: "June 2025",
   summary:
-    "Persist AI uses AI to design drug formulations. I work across two products — Persist-AI-Suite, our multi-agent formulator, and the Cloud Lab customers order experiments through — and run the sprint for both.",
+    "I work across two products — Persist-AI-Suite, our multi-agent formulator, and the Cloud Lab customers order experiments through — and run the sprint for both.",
 };
 
 export const staged: StatusEntry[] = [
