@@ -1,4 +1,4 @@
-# ryanuyeki.com
+# https://ryanuyeki.vercel.app/
 
 A personal site that reads like a repository. Each section is a git command:
 
