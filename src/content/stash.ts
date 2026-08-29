@@ -22,14 +22,51 @@ import type { StashEntry } from "./types";
 export const stashMeta = {
   /** Line under the section heading. Rewrite this too. */
   intro:
-    "Work in progress that has nothing to do with work. Saved off to the side, picked back up on weekends.",
+    "What I'm up to outside of work. Saved off to the side, picked back up on weekends.",
 };
 
 export const stash: StashEntry[] = [
   {
     on: "weekends",
     title: "Basketball, played and watched",
-    body: "Pickup runs with friends, fantasy leagues, and Stephen Curry. It's the only hobby I have that keeps me relatively in shape.",
+    body: "Basketball was my first love, and it gave back more than a jump shot: the best memories of my life and friendships that have lasted well beyond the game.",
+    gallery: [
+      {
+        src: "/basketball-1.png",
+        alt: "Ryan and teammates in Wilson basketball jerseys in the gym",
+        caption: "Wilson basketball — the summer-league squad.",
+      },
+      {
+        src: "/basketball-2.jpg",
+        alt: "Ryan and friends repping Lakers and Kobe jerseys",
+        caption: "Kobe day with the guys. Mamba forever.",
+      },
+      {
+        src: "/basketball-3.jpg",
+        alt: "Two players in warmups at the Wildcat gym on game day",
+        caption: "Game day under the Wildcat Pride banner.",
+      },
+      {
+        src: "/basketball-4.jpg",
+        alt: "The team at a long table for a post-game dinner",
+        caption: "Team dinners were half the season.",
+      },
+      {
+        src: "/basketball-5.jpg",
+        alt: "Full Wilson basketball team photo with the coach",
+        caption: "The whole roster — Wilson, one through the bench.",
+      },
+      {
+        src: "/basketball-6.jpg",
+        alt: "Friends carrying a teammate outside at night, laughing",
+        caption: "Off the court, still a team.",
+      },
+      {
+        src: "/basketball-7.jpg",
+        alt: "Players holding tournament trophies on a sunny day",
+        caption: "Came home with the hardware.",
+      },
+    ],
   },
   {
     on: "summer",
@@ -44,6 +81,11 @@ export const stash: StashEntry[] = [
   {
     on: "early-mornings",
     title: "Golf, chasing a better round",
-    body: "The opposite of pickup basketball: four hours long, entirely self-inflicted, and impossible to blame on anyone else. One good shot a round is somehow enough to book the next tee time. Still looking to break 100...",
+    body: "Something I picked up this year and quickly fell for. It's the hardest sport I've ever played, and that's precisely what I love about it. One pure shot is enough to keep me hooked and booking the next tee time. Still looking to break 100...",
+  },
+  {
+    on: "off-hours",
+    title: "Managing a rental property",
+    body: "On the side, I run a rental property end to end — listing rooms across Facebook, Zillow, and Roommates.com, giving tours, and interviewing tenants before anyone gets a key. A different kind of problem-solving than code: reading people, not stack traces.",
   },
 ];

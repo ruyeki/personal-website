@@ -70,13 +70,13 @@ export default function Hero() {
 
           {/* Avatar, framed like a committed asset */}
           <div className="shrink-0 self-start">
-            <div className="panel w-[104px] p-1.5 md:w-[160px]">
+            <div className="panel w-[124px] p-1.5 md:w-[196px]">
               <Image
                 src={profile}
                 alt={site.name}
                 placeholder="blur"
                 priority
-                sizes="160px"
+                sizes="196px"
                 className="aspect-square w-full rounded-[5px] object-cover"
               />
               <p className="px-1 pt-1.5 pb-0.5 text-center text-[10px] text-faint">profile.jpg</p>

@@ -37,6 +37,26 @@ export const branches: Branch[] = [
     stat: { add: 38, rem: 14 },
   },
   {
+    name: "feat/pc-build",
+    title: "Custom PC Build",
+    state: "shipped",
+    range: "2026",
+    blurb:
+      "My first full custom build. A Ryzen 5 9600X on an ASRock B850M Pro A — a genuinely modern AM5 / DDR5 / PCIe 5.0 platform — paired with 16GB of DDR5 I bought off a stranger on Facebook Marketplace and a GTX 1080 that refuses to become obsolete. Not a showpiece; a machine I use every day, built to grow into the board.",
+    next:
+      "The CPU and board are the long-term bet; the GPU and memory are where it grows next — a real modern graphics card and a full 32GB+, once Marketplace stops being my supplier.",
+    stack: [
+      "Ryzen 5 9600X",
+      "ASRock B850M Pro A",
+      "16GB DDR5",
+      "NVIDIA GTX 1080",
+      "AM5",
+      "PCIe 5.0",
+    ],
+    links: [],
+    stat: { add: 7, rem: 0 },
+  },
+  {
     name: "feat/this-site",
     title: "This Site",
     state: "active",

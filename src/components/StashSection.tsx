@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHead from "./SectionHead";
+import StashGallery from "./StashGallery";
 import { stash, stashMeta } from "@/content/stash";
 
 /**
@@ -34,6 +35,9 @@ export default function StashSection() {
 
               <h3 className="mt-2.5 text-[14px] font-medium text-fg">{entry.title}</h3>
               <p className="prose mt-1.5 text-[13px] text-muted">{entry.body}</p>
+              {entry.gallery && entry.gallery.length > 0 && (
+                <StashGallery slides={entry.gallery} />
+              )}
             </li>
           ))}
         </ul>

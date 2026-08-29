@@ -63,6 +63,8 @@ export type StashEntry = {
   on: string;
   title: string;
   body: string;
+  /** Optional photo gallery, revealed behind a dropdown as a clickable slideshow. */
+  gallery?: { src: string; alt: string; caption: string }[];
 };
 
 /** A group of skills, rendered as a `git config` INI section. */
