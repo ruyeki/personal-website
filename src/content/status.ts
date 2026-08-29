@@ -10,19 +10,19 @@ export const statusMeta = {
   upstream: "origin/persist-ai",
   since: "June 2025",
   summary:
-    "Persist AI uses AI to design drug formulations. I work across two products — Nike, our multi-agent formulator, and the Cloud Lab customers order experiments through — and run the sprint for both.",
+    "Persist AI uses AI to design drug formulations. I work across two products — Persist-AI-Suite, our multi-agent formulator, and the Cloud Lab customers order experiments through — and run the sprint for both.",
 };
 
 export const staged: StatusEntry[] = [
   {
     state: "new file",
     path: "nike/agents/formulators/",
-    note: "Integrating specialized formulator agents into Nike, our multi-agent AI formulator. Each one widens the range of formulations the system can reason about, which is time a scientist doesn't spend starting from a blank page.",
+    note: "Integrating specialized formulator agents into Persist-AI-Suite, our multi-agent AI formulator. Each one widens the range of formulations the system can reason about, which is time a scientist doesn't spend starting from a blank page.",
   },
   {
     state: "new file",
     path: "nike/tests/",
-    note: "Wrote and own the entire test suite. Nike's output turns into real experiments, so a silent regression costs bench time and material — not just a red build.",
+    note: "Wrote and own the entire test suite. Persist-AI-Suite's output turns into real experiments, so a silent regression costs bench time and material — not just a red build.",
   },
   {
     state: "modified",
@@ -52,7 +52,7 @@ export const staged: StatusEntry[] = [
   {
     state: "modified",
     path: "team/interns/",
-    note: "Overseeing our interns — speccing out their projects, running weekly check-ins, fielding questions, and mentoring them through the parts that aren't in the ticket.",
+    note: "And on top of all of that, mentoring a high school intern — scoping their projects, running weekly check-ins, and coaching them through the parts of the job that never make it into a ticket.",
   },
 ];
 

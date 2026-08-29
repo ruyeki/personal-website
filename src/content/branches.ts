@@ -22,7 +22,7 @@ export const branches: Branch[] = [
     next:
       "Give it the brain the name implies. A local LLM reading from that same Prometheus data, so instead of interpreting a dashboard I can just ask how the server is doing — what's under load, what's trending the wrong way, what's worth looking at before it turns into an outage. Then put it behind an API so every app on the box inherits it, and the server can explain itself to anything that asks.",
     stack: ["Ubuntu", "Linux", "Prometheus", "Grafana", "node_exporter", "Self-hosting"],
-    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
+    links: [],
     stat: { add: 52, rem: 9 },
   },
   {
@@ -33,7 +33,7 @@ export const branches: Branch[] = [
     blurb:
       "Building a rogue-lite in Unity with friends. No roadmap, no launch date, no metrics — the rare project where shipping isn't the point and the group chat is half the fun.",
     stack: ["Unity", "C#", "Game design"],
-    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
+    links: [],
     stat: { add: 38, rem: 14 },
   },
   {
@@ -73,7 +73,12 @@ export const branches: Branch[] = [
     blurb:
       "Drag sliders to weight the stats you actually care about and watch the league re-rank live. Built because every 'best player' argument is really a disagreement about weights.",
     stack: ["React", "Python", "Pandas"],
-    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
+    links: [
+      {
+        label: "github.com/NobodyTypical/NBA-Slider-Stats",
+        href: "https://github.com/NobodyTypical/NBA-Slider-Stats",
+      },
+    ],
     stat: { add: 33, rem: 5 },
   },
 ];

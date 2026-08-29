@@ -53,6 +53,18 @@ export const commits: Commit[] = [
       { k: "ctx", t: "what makes two experiments actually comparable — a workflow" },
       { k: "ctx", t: "that drifts between runs produces data nobody can trust." },
     ],
+    images: [
+      {
+        src: "/lab-workflows.webp",
+        alt: "Ryan at a lab workstation, building automation workflows on screen",
+        caption: "An actual picture of me making automation workflows",
+      },
+      {
+        src: "/lab-floor.webp",
+        alt: "The Persist AI automation lab floor, with robotic instruments and a scientist at work",
+        caption: "A peek at the lab floor these workflows actually run on.",
+      },
+    ],
   },
   {
     hash: "b90c15e",
@@ -125,7 +137,53 @@ export const commits: Commit[] = [
     stack: ["Algorithms", "Systems", "Databases"],
     body: [
       { k: "add", t: "B.S. in Computer Science" },
-      { k: "add", t: "Aggie Sports Analytics — where the basketball work started" },
+    ],
+    gallery: [
+      {
+        src: "/grad-1.jpeg",
+        alt: "Ryan in cap and gown with friends after the UC Davis commencement",
+        caption: "Commencement day — four years compiled into one afternoon.",
+      },
+      {
+        src: "/grad-2.jpeg",
+        alt: "Ryan and a friend in the sun",
+        caption: "The people who made the all-nighters survivable.",
+      },
+      {
+        src: "/grad-3.jpeg",
+        alt: "Ryan with his family at graduation, holding a graduation Pikachu and flowers",
+        caption: "With the family that got me to the stage — Pikachu included.",
+      },
+      {
+        src: "/grad-4.jpeg",
+        alt: "Ryan and a friend in cap and gown in front of a UC Davis backdrop",
+        caption: "Aggie for life. Go Ags.",
+      },
+      {
+        src: "/grad-5.jpeg",
+        alt: "The ScoutAI team presenting on stage in front of a Scout AI slide",
+        caption: "Pitching ScoutAI — the basketball project that started it all.",
+      },
+      {
+        src: "/grad-6.jpeg",
+        alt: "CodeLab cohort holding certificates of achievement",
+        caption: "CodeLab demo night — a room full of people who ship.",
+      },
+      {
+        src: "/grad-7.jpeg",
+        alt: "Ryan with two friends at a party",
+        caption: "The crew, off the clock.",
+      },
+      {
+        src: "/grad-8.jpeg",
+        alt: "Intramural basketball team posing on the bleachers",
+        caption: "Intramural hoops — the only cardio I signed up for.",
+      },
+      {
+        src: "/grad-9.jpeg",
+        alt: "Group selfie with friends outside Golden 1 Center at night",
+        caption: "Kings night at Golden 1 with the whole crew.",
+      },
     ],
   },
 ];

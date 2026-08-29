@@ -4,6 +4,7 @@ import { useState } from "react";
 import DiffBlock from "./DiffBlock";
 import Reveal from "./Reveal";
 import SectionHead from "./SectionHead";
+import Slideshow from "./Slideshow";
 import { commits } from "@/content/log";
 
 /**
@@ -34,7 +35,7 @@ export default function LogSection() {
         title="What I've accomplished"
         cmd="git log"
         flags="--author=ruyeki --stat"
-        blurb="One commit per thing built, newest first. Expand one to see what changed because I was there — minus lines are how it worked before, plus lines are what I left behind."
+        blurb="My track record as a commit history — one commit per thing I've built and shipped, newest first. Expand one to see what changed because I was there — minus lines are how it worked before, plus lines are what I left behind."
       />
 
       <Reveal>
@@ -126,6 +127,27 @@ export default function LogSection() {
                         @@ {c.org.toLowerCase().replace(/[^a-z0-9]+/g, "-")} @@
                       </div>
                       <DiffBlock lines={c.body} />
+                      {c.images && c.images.length > 0 && (
+                        <div className="grid gap-4 border-t border-line px-4 py-4 sm:grid-cols-2">
+                          {c.images.map((img) => (
+                            <figure key={img.src}>
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src={img.src}
+                                alt={img.alt}
+                                loading="lazy"
+                                className="w-full rounded-md border border-line"
+                              />
+                              <figcaption className="mt-2 text-[12px] text-faint">
+                                {img.caption}
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      )}
+                      {c.gallery && c.gallery.length > 0 && (
+                        <Slideshow slides={c.gallery} />
+                      )}
                       <div className="border-t border-line bg-inset px-4 py-3">
                         <div className="flex flex-wrap gap-1.5">
                           {c.stack.map((s) => (

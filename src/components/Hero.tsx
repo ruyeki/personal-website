@@ -1,6 +1,7 @@
 import Image from "next/image";
 import DiffBlock from "./DiffBlock";
 import Reveal from "./Reveal";
+import Typewriter from "./Typewriter";
 import { aboutDiff, site } from "@/content/site";
 import profile from "@/app/profile.jpg";
 
@@ -23,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-col-reverse gap-8 md:flex-row md:items-start md:gap-10">
           <div className="min-w-0 flex-1">
             <h1 className="text-[clamp(30px,6.5vw,52px)] font-semibold leading-[1.08] tracking-tight">
-              {site.name}
+              <Typewriter text={site.name} />
             </h1>
 
             <p className="prose mt-4 max-w-[56ch] text-[15px] text-muted md:text-[16px]">
@@ -32,8 +33,7 @@ export default function Hero() {
               <span className="text-fg">instrument automation</span>, and the{" "}
               <span className="text-fg">customer-facing tools</span> on top of both. Mostly
               Python and TypeScript, mostly in places where the code has to be right the first
-              time because the experiment already ran. These days I also run the sprint and
-              mentor our interns.
+              time because the experiment already ran.
             </p>
 
             <dl className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px]">
@@ -70,13 +70,13 @@ export default function Hero() {
 
           {/* Avatar, framed like a committed asset */}
           <div className="shrink-0 self-start">
-            <div className="panel w-[92px] p-1.5 md:w-[136px]">
+            <div className="panel w-[104px] p-1.5 md:w-[160px]">
               <Image
                 src={profile}
                 alt={site.name}
                 placeholder="blur"
                 priority
-                sizes="136px"
+                sizes="160px"
                 className="aspect-square w-full rounded-[5px] object-cover"
               />
               <p className="px-1 pt-1.5 pb-0.5 text-center text-[10px] text-faint">profile.jpg</p>

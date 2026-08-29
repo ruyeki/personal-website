@@ -33,6 +33,10 @@ export type Commit = {
   stack: string[];
   /** Shown when the commit is expanded. */
   body: DiffLine[];
+  /** Optional images, shown side by side when the commit is expanded. `src` is a /public path. */
+  images?: { src: string; alt: string; caption: string }[];
+  /** Optional photo gallery, shown as a clickable slideshow when the commit is expanded. */
+  gallery?: { src: string; alt: string; caption: string }[];
   /** Optional repo/site links for work that has something public to point at. */
   links?: { label: string; href: string }[];
 };
@@ -59,6 +63,13 @@ export type StashEntry = {
   on: string;
   title: string;
   body: string;
+};
+
+/** A group of skills, rendered as a `git config` INI section. */
+export type SkillGroup = {
+  /** INI section name, e.g. `languages`. Lowercase, no spaces. */
+  section: string;
+  items: string[];
 };
 
 /** A `git remote -v` row — contact links. */

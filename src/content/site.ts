@@ -16,7 +16,7 @@ export const site = {
     "Software engineer building multi-agent AI formulators and lab automation at Persist AI.",
 
   description:
-    "Ryan Uyeki is a software engineer at Persist AI, working on Nike, a multi-agent AI drug formulator, and the customer-facing Cloud Lab — after building the OPC-UA instrument automation and multi-modal RAG reporting behind them. Scrum master and intern mentor. UC Davis CS, 2025.",
+    "Ryan Uyeki is a software engineer at Persist AI, working on Persist-AI-Suite, a multi-agent AI drug formulator, and the customer-facing Cloud Lab — after building the OPC-UA instrument automation and multi-modal RAG reporting behind them. Scrum master and intern mentor. UC Davis CS, 2025.",
 } as const;
 
 /** Anchors in the sticky header. `id` must match a <section id> on the page. */
@@ -24,6 +24,7 @@ export const nav = [
   { id: "status", label: "status" },
   { id: "log", label: "log" },
   { id: "branch", label: "branch" },
+  { id: "skills", label: "config" },
   { id: "stash", label: "stash" },
   { id: "remote", label: "remote" },
 ] as const;

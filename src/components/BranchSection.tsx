@@ -25,7 +25,7 @@ export default function BranchSection() {
         title="Side projects"
         cmd="git branch"
         flags="-a --sort=-committerdate"
-        blurb="Things I started off the clock. Most of them exist because I wanted to settle an argument with data, or because something I used every day was worse than it needed to be."
+        blurb="Things I started off the clock — usually to learn something new, or just to build something cool for its own sake."
       />
 
       <Reveal>

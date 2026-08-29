@@ -34,16 +34,16 @@ export const stash: StashEntry[] = [
   {
     on: "summer",
     title: "Dodgers baseball, all 162",
-    body: "Baseball is the sport that rewards paying attention over a long season — the one where a bad week means nothing and a good one means less. Replace this with an actual take.",
+    body: "162 games a year, and I'm in for all of them. Baseball rewards paying attention over the long haul — and right now that means watching Shohei Ohtani do things that aren't supposed to be possible in the same uniform I grew up on.",
   },
   {
     on: "saturday-night",
     title: "UFC fight nights",
-    body: "Nothing analytical about it. I just watch. (Your line here — favourite fighter, a card you still think about.)",
+    body: "Nothing analytical about it. I just watch. Favorite fighter is Islam Makhachev and my favorite card of the year so far was UFC Freedom 250!",
   },
   {
     on: "early-mornings",
     title: "Golf, chasing a better round",
-    body: "The opposite of pickup basketball: four hours long, entirely self-inflicted, and impossible to blame on anyone else. One good shot a round is somehow enough to book the next tee time.",
+    body: "The opposite of pickup basketball: four hours long, entirely self-inflicted, and impossible to blame on anyone else. One good shot a round is somehow enough to book the next tee time. Still looking to break 100...",
   },
 ];
