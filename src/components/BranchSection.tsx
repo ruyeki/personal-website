@@ -84,6 +84,13 @@ export default function BranchSection() {
                       {b.blurb}
                     </p>
 
+                    {b.next && (
+                      <div className="todo">
+                        <span className="todo-label">TODO</span>
+                        <p className="prose max-w-[68ch] text-[13px] text-muted">{b.next}</p>
+                      </div>
+                    )}
+
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {b.stack.map((t) => (
                         <span key={t} className="pill">

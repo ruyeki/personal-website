@@ -34,7 +34,7 @@ export default function LogSection() {
         title="What I've accomplished"
         cmd="git log"
         flags="--author=ruyeki --stat"
-        blurb="Every role, newest first. Expand one to see what changed because I was there — minus lines are how it worked before, plus lines are what I left behind."
+        blurb="One commit per thing built, newest first. Expand one to see what changed because I was there — minus lines are how it worked before, plus lines are what I left behind."
       />
 
       <Reveal>
@@ -126,12 +126,32 @@ export default function LogSection() {
                         @@ {c.org.toLowerCase().replace(/[^a-z0-9]+/g, "-")} @@
                       </div>
                       <DiffBlock lines={c.body} />
-                      <div className="flex flex-wrap gap-1.5 border-t border-line bg-inset px-4 py-3">
-                        {c.stack.map((s) => (
-                          <span key={s} className="pill">
-                            {s}
-                          </span>
-                        ))}
+                      <div className="border-t border-line bg-inset px-4 py-3">
+                        <div className="flex flex-wrap gap-1.5">
+                          {c.stack.map((s) => (
+                            <span key={s} className="pill">
+                              {s}
+                            </span>
+                          ))}
+                        </div>
+                        {c.links && c.links.length > 0 && (
+                          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+                            {c.links.map((l) => (
+                              <a
+                                key={l.href}
+                                href={l.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="lnk inline-flex items-center gap-1.5 text-[12px]"
+                              >
+                                <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
+                                  <path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5A1.75 1.75 0 0 1 3.75 2Zm6.5-1h4a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V3.56L8.53 8.78a.75.75 0 0 1-1.06-1.06L12.69 2.5h-2.44a.75.75 0 0 1 0-1.5Z" />
+                                </svg>
+                                {l.label}
+                              </a>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}

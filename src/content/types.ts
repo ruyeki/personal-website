@@ -33,6 +33,8 @@ export type Commit = {
   stack: string[];
   /** Shown when the commit is expanded. */
   body: DiffLine[];
+  /** Optional repo/site links for work that has something public to point at. */
+  links?: { label: string; href: string }[];
 };
 
 /** A side project, modelled as a branch. */
@@ -45,6 +47,8 @@ export type Branch = {
   blurb: string;
   stack: string[];
   links: { label: string; href: string }[];
+  /** Optional "what's coming" note, rendered as a TODO callout under the blurb. */
+  next?: string;
   /** Drives the little diffstat bar. Rough by design — it's a vibe, not telemetry. */
   stat: { add: number; rem: number };
 };

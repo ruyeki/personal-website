@@ -6,7 +6,7 @@ import type { StashEntry } from "./types";
  * Everything else on the site came off your resume. This section didn't,
  * because I don't know it. What's below is scaffolding in your voice, seeded
  * from the couple of lines on your old site (basketball, baseball, UFC,
- * Dodgers, Warriors, Japanese). Treat it as a shape to overwrite, not copy
+ * Dodgers, Warriors). Treat it as a shape to overwrite, not copy
  * to keep.
  *
  * HOW TO EDIT
@@ -28,8 +28,8 @@ export const stashMeta = {
 export const stash: StashEntry[] = [
   {
     on: "weekends",
-    title: "Basketball, actually played",
-    body: "Pickup runs, not fantasy leagues. It's the only hobby I have that punishes overthinking, which is probably why I need it.",
+    title: "Basketball, played and watched",
+    body: "Pickup runs with friends, fantasy leagues, and Stephen Curry. It's the only hobby I have that keeps me relatively in shape.",
   },
   {
     on: "summer",
@@ -42,13 +42,8 @@ export const stash: StashEntry[] = [
     body: "Nothing analytical about it. I just watch. (Your line here — favourite fighter, a card you still think about.)",
   },
   {
-    on: "sports-analytics",
-    title: "Numbers, applied to the games",
-    body: "The through-line between the hobby and the job: ScoutAI and NBA Slider Stats both started as arguments I wanted to win with data. Aggie Sports Analytics is where that habit came from.",
-  },
-  {
-    on: "long-term",
-    title: "日本語 — conversational, improving",
-    body: "Native English, conversational Japanese. Still chipping at it. (Add why, or what you're using — it's more interesting than the resume line.)",
+    on: "early-mornings",
+    title: "Golf, chasing a better round",
+    body: "The opposite of pickup basketball: four hours long, entirely self-inflicted, and impossible to blame on anyone else. One good shot a round is somehow enough to book the next tee time.",
   },
 ];

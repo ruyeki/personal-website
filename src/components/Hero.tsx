@@ -28,11 +28,12 @@ export default function Hero() {
 
             <p className="prose mt-4 max-w-[56ch] text-[15px] text-muted md:text-[16px]">
               I build the software that runs a pharmaceutical lab —{" "}
-              <span className="text-fg">instrument automation</span>,{" "}
-              <span className="text-fg">multi-modal AI pipelines</span>, and the{" "}
+              <span className="text-fg">multi-agent AI formulators</span>,{" "}
+              <span className="text-fg">instrument automation</span>, and the{" "}
               <span className="text-fg">customer-facing tools</span> on top of both. Mostly
               Python and TypeScript, mostly in places where the code has to be right the first
-              time because the experiment already ran.
+              time because the experiment already ran. These days I also run the sprint and
+              mentor our interns.
             </p>
 
             <dl className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px]">

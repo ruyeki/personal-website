@@ -1,7 +1,10 @@
 import type { Branch } from "./types";
 
 /**
- * `git branch -a` — side projects.
+ * `git branch -a` — side projects, i.e. the things I build off the clock.
+ *
+ * Work projects live in log.ts instead, so nothing is claimed twice. If a
+ * project started as a hobby and became work, it belongs in the log.
  *
  * `state` drives the badge and the branch-graph node:
  *   active  — still committing to it
@@ -10,15 +13,44 @@ import type { Branch } from "./types";
  */
 export const branches: Branch[] = [
   {
-    name: "feat/ai-karthik",
-    title: "Report Generator",
-    state: "merged",
-    range: "Jun 2025 — Aug 2025",
+    name: "feat/cortana",
+    title: "Cortana — Home Server",
+    state: "active",
+    range: "2026 — present",
     blurb:
-      "A multi-agent chatbot that writes structured project reports by retrieving text, images, and graphs out of Persist AI's lab notebook. A watcher script re-indexes Chroma and SQLite whenever the notebook changes, so answers are never quoting last week's data.",
-    stack: ["Python", "LangChain", "OpenRouter", "Gemini", "Chroma", "FastAPI", "React"],
-    links: [{ label: "github.com/ruyeki/ai-karthik", href: "https://github.com/ruyeki/ai-karthik" }],
-    stat: { add: 74, rem: 12 },
+      "My old college laptop, refusing to retire. It runs Ubuntu with a monitoring pipeline I built out: node_exporter scrapes system metrics, Prometheus stores and queries them, Grafana draws the dashboards — so the box tells me it's unhappy before something actually falls over. It also hosts my own apps, including a finance tracker I actually use. I named it Cortana, which is currently a generous description of a machine that draws graphs.",
+    next:
+      "Give it the brain the name implies. A local LLM reading from that same Prometheus data, so instead of interpreting a dashboard I can just ask how the server is doing — what's under load, what's trending the wrong way, what's worth looking at before it turns into an outage. Then put it behind an API so every app on the box inherits it, and the server can explain itself to anything that asks.",
+    stack: ["Ubuntu", "Linux", "Prometheus", "Grafana", "node_exporter", "Self-hosting"],
+    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
+    stat: { add: 52, rem: 9 },
+  },
+  {
+    name: "feat/roguelite",
+    title: "Untitled Rogue-lite",
+    state: "active",
+    range: "2026 — present",
+    blurb:
+      "Building a rogue-lite in Unity with friends. No roadmap, no launch date, no metrics — the rare project where shipping isn't the point and the group chat is half the fun.",
+    stack: ["Unity", "C#", "Game design"],
+    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
+    stat: { add: 38, rem: 14 },
+  },
+  {
+    name: "feat/this-site",
+    title: "This Site",
+    state: "active",
+    range: "2025 — present",
+    blurb:
+      "A portfolio that reads like a repository, because that's how the work actually accumulates. Next.js and hand-written CSS, no component library — every diff row, branch line, and commit node in the background is drawn on purpose.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Canvas"],
+    links: [
+      {
+        label: "github.com/ruyeki/personal-website",
+        href: "https://github.com/ruyeki/personal-website",
+      },
+    ],
+    stat: { add: 47, rem: 47 },
   },
   {
     name: "feat/scout-ai",
@@ -34,17 +66,6 @@ export const branches: Branch[] = [
     stat: { add: 61, rem: 8 },
   },
   {
-    name: "feat/d2d-cure",
-    title: "D2D Cure",
-    state: "shipped",
-    range: "2024",
-    blurb:
-      "The protein and enzyme data platform for the Siegel Lab's national curriculum — 40+ institutions and 1,000+ students submitting and comparing results. Moved from legacy PHP onto Next.js with real authentication and per-institution admin control.",
-    stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-    links: [{ label: "d2dcure.com", href: "https://d2dcure.com" }],
-    stat: { add: 88, rem: 41 },
-  },
-  {
     name: "feat/nba-slider-stats",
     title: "NBA Slider Stats",
     state: "shipped",
@@ -54,16 +75,5 @@ export const branches: Branch[] = [
     stack: ["React", "Python", "Pandas"],
     links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
     stat: { add: 33, rem: 5 },
-  },
-  {
-    name: "feat/this-site",
-    title: "This Site",
-    state: "active",
-    range: "2025 — present",
-    blurb:
-      "A portfolio that reads like a repository, because that's how the work actually accumulates. Next.js and hand-written CSS, no component library — every diff row and branch line here is drawn on purpose.",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    links: [{ label: "github.com/ruyeki", href: "https://github.com/ruyeki" }],
-    stat: { add: 47, rem: 47 },
   },
 ];

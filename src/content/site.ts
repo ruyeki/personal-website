@@ -13,10 +13,10 @@ export const site = {
 
   /** Used for <title> and OG. Keep it one line. */
   tagline:
-    "Software engineer building lab automation and applied-AI tooling at Persist AI.",
+    "Software engineer building multi-agent AI formulators and lab automation at Persist AI.",
 
   description:
-    "Ryan Uyeki is a software engineer at Persist AI, where he builds OPC-UA lab automation, multi-modal RAG reporting, and customer-facing data tools for pharmaceutical formulation. UC Davis CS, 2025.",
+    "Ryan Uyeki is a software engineer at Persist AI, working on Nike, a multi-agent AI drug formulator, and the customer-facing Cloud Lab — after building the OPC-UA instrument automation and multi-modal RAG reporting behind them. Scrum master and intern mentor. UC Davis CS, 2025.",
 } as const;
 
 /** Anchors in the sticky header. `id` must match a <section id> on the page. */

@@ -259,6 +259,27 @@ html.transitions-off *::after { transition: none !important; }
   line-height: 1.68;
 }
 
+/* Roadmap callout on a branch card ---------------------------
+   Defined here, not with Tailwind utilities: the global
+   `* { border-color }` reset and `.mono-label` colour are unlayered
+   and would win against `border-accent/45` / `text-accent`. */
+.todo {
+  margin-top: 1rem;
+  padding: .5rem .75rem;
+  border-left: 2px dashed var(--accent-br);
+  background: var(--accent-bg);
+  border-radius: 0 4px 4px 0;
+}
+.todo > .todo-label {
+  display: block;
+  margin-bottom: .25rem;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: .9;
+}
+
 /* Links ------------------------------------------------------ */
 .lnk {
   color: var(--link);

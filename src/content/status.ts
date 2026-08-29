@@ -10,43 +10,64 @@ export const statusMeta = {
   upstream: "origin/persist-ai",
   since: "June 2025",
   summary:
-    "Persist AI builds AI-driven drug formulation. I work where the software meets the lab bench — the instruments, the data coming off them, and the tools the scientists and customers actually open.",
+    "Persist AI uses AI to design drug formulations. I work across two products — Nike, our multi-agent formulator, and the Cloud Lab customers order experiments through — and run the sprint for both.",
 };
 
 export const staged: StatusEntry[] = [
   {
-    state: "modified",
-    path: "asd/opcua_workflows.py",
-    note: "Autonomous dissolution, stability, and formulation runs over OPC-UA — the lab keeps working after everyone goes home.",
+    state: "new file",
+    path: "nike/agents/formulators/",
+    note: "Integrating specialized formulator agents into Nike, our multi-agent AI formulator. Each one widens the range of formulations the system can reason about, which is time a scientist doesn't spend starting from a blank page.",
   },
   {
     state: "new file",
-    path: "reports/agents/multimodal_rag.py",
-    note: "Specialized agents that read text, images, and tabular results together, then write the lab report a human would have written.",
+    path: "nike/tests/",
+    note: "Wrote and own the entire test suite. Nike's output turns into real experiments, so a silent regression costs bench time and material — not just a red build.",
   },
   {
     state: "modified",
-    path: "microscopy/amscope_driver.py",
-    note: "XY stage control and brightfield capture, with particle detection and amorphous-vs-crystalline classification on the way out.",
+    path: "nike/app/",
+    note: "Working across the whole software side: shipping features, fixing bugs, and keeping the platform coherent as new agents land in it.",
   },
   {
     state: "new file",
-    path: "cloudlab/viewer/",
-    note: "Customer-facing: upload formulation data, explore it as interactive graphs, charts, and tables instead of emailed spreadsheets.",
+    path: "cloudlab/sharing/",
+    note: "Sharing and notification system for the Cloud Lab, where customers design a formulation and we build, run, and return the results. Keeps both sides in sync without anyone refreshing a page or chasing an email.",
+  },
+  {
+    state: "new file",
+    path: "cloudlab/admin/",
+    note: "Admin tooling for uploading result files and client onboarding files — the path every customer's data takes into and out of the lab.",
+  },
+  {
+    state: "new file",
+    path: "cloudlab/theme/dark.ts",
+    note: "Dark mode across the Cloud Lab, because the people reading result dashboards are not always doing it at noon.",
+  },
+  {
+    state: "modified",
+    path: "team/sprint-board",
+    note: "Scrum master on both projects: assigning work, sizing story points, and keeping the board honest so the team knows what's actually in flight.",
+  },
+  {
+    state: "modified",
+    path: "team/interns/",
+    note: "Overseeing our interns — speccing out their projects, running weekly check-ins, fielding questions, and mentoring them through the parts that aren't in the ticket.",
   },
 ];
 
-/** The headline numbers, shown as a diff against how things worked before. */
+/** Where the work has moved, shown as a diff against how things ran before. */
 export const impactDiff: DiffLine[] = [
-  { k: "ctx", t: "@@ persist-ai/lab @@" },
-  { k: "rem", t: "Manual instrument setup for every dissolution run" },
-  { k: "add", t: "~50% less manual work; 100–150 more samples per week" },
+  { k: "ctx", t: "@@ nike @@" },
+  { k: "rem", t: "Candidate formulations designed and evaluated by hand" },
+  { k: "add", t: "A multi-agent system that proposes them, behind a test suite" },
+  { k: "add", t: "that catches regressions before they reach a real experiment" },
   { k: "ctx", t: "" },
-  { k: "ctx", t: "@@ persist-ai/reporting @@" },
-  { k: "rem", t: "Analysts hand-assembling reports from scattered results" },
-  { k: "add", t: "70% faster reporting via a multi-modal RAG pipeline" },
+  { k: "ctx", t: "@@ cloudlab @@" },
+  { k: "rem", t: "Customers waiting on email for status and results" },
+  { k: "add", t: "Self-serve: design a formulation, follow the run, get notified" },
   { k: "ctx", t: "" },
-  { k: "ctx", t: "@@ persist-ai/cloudlab @@" },
-  { k: "rem", t: "Results delivered as static files and screenshots" },
-  { k: "add", t: "Self-serve viewer generating $10k+/month in revenue" },
+  { k: "ctx", t: "@@ team @@" },
+  { k: "rem", t: "Heads-down individual contributor" },
+  { k: "add", t: "Scrum master on both projects; mentoring the intern cohort" },
 ];
